@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">📋 Project Scope</h2>
+<h3 class="font-semibold">In Scope:</h3>
+<ul class="list-disc pl-6 mb-4">
+    {% for item in data.scope["In Scope"] %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+<h3 class="font-semibold">Out of Scope:</h3>
+<ul class="list-disc pl-6">
+    {% for item in data.scope["Out of Scope"] %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
